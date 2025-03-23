@@ -8,7 +8,9 @@ import { NavComponent } from "../components/nav/nav.component";
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-    backgroundColor = input();
-    headerColor = input();
-    links = input(["black", "black", "black"]);
+    bg = input("white");
+    h = input("black");
+    l = input("black");
+    p = input("black");
+    acronym = input("bheck eif ai rknow");
 }

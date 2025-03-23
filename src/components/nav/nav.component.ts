@@ -7,5 +7,5 @@ import { Component, input, InputSignal } from '@angular/core';
   styleUrl: './nav.component.scss'
 })
 export class NavComponent {
-    links = input<string[]>(["black", "black", "black"]);
+    l = input("black");
 }

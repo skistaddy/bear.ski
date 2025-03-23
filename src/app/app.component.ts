@@ -1,36 +1,17 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 import { HomeComponent } from '../home/home.component';
 import chroma from "chroma-js";
 
-function gen() {
-    let base = chroma.random().set("hsl.s", 1);
-    let complement = base.set("hsl.h", base.get("hsl.h") + 180);
-    const baseL = chroma(base).luminance()
-    const compL = chroma(complement).luminance()
-
-    if(chroma.contrast(base, complement) < 7){
-        gen();
-    }
-    
-    if(baseL < compL){
-        return [complement, base]
-    } else {
-        return [base, complement]
-    }
+function saturate(x: any){
+    return x.set("hsl.s", 1).set("hsl.l", 0.45).hex()
 }
 
-function palify(){
-    let lums = chroma.scale(gen()).mode("hsl").colors(5);
-    lums = lums.map((x: any) => [chroma(x).luminance(), x])
-    console.log(lums)
-    lums.sort((a: any, b: any) => {
-        return a[0] - b[0]
-    })
-    return lums.map((x: any) => x[1])
-}
-
-let palette = palify()
+const bgV = chroma.random(); // background
+const hV = bgV.set("hsl.h", bgV.get("hsl.h") + 120); // header
+const lV = bgV.set("hsl.h", bgV.get("hsl.h") + 240); // links
+const pV = chroma.contrast(bgV, 'white') > 4.5 ? 'white' : 'black';
 
 @Component({
   selector: 'app-root',
@@ -40,7 +21,24 @@ let palette = palify()
 })
 
 export class AppComponent {
-    backgroundColor = palette[0];
-    links = signal<string[]>(palette.slice(1, 4));
-    headerColor = palette[4];
+    bg = saturate(bgV);
+    h = saturate(hV);
+    l = saturate(lV);
+    p = pV
+    acronym: any;
+
+    private http = inject(HttpClient);
+
+    constructor() {
+        this.http.get('bear.txt', { responseType: 'text' })
+            .subscribe(
+                (data: any) => {
+                    const fmt = data.split("\n").filter((x: any) => x)
+                    console.log(fmt)
+                    this.acronym = fmt[Math.floor(Math.random() * fmt.length)]
+                        
+                },
+                (error: any)  => console.error('Error loading text file:', error)
+            );
+  }
 }
