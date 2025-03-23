@@ -1,4 +1,13 @@
-<main>
-    <app-header [h]="h()" [l]="l()"/>
-    <p>i'm the bear</p>
+<main [style.background-color]="bg">
+    <app-header [l]="l" [h]="h" [p]="p"/>
+    <div class="d-flex align-items-center justify-content-center text-center">
+        @let c = p === "white" ? "black" : "white";
+        <div id="box" style="color: {{ p }}; background-color: {{ c }}; border-color: {{ p }}">
+            <p>name = baran skistad</p>
+            <p>location = new port richey, fl</p>
+            <p>age = 21</p>
+            <p>languages = javascript, python, css, html</p>
+            <p>frameworks = node.js, angular, bootstrap</p>
+        </div>
+    </div>
 </main>

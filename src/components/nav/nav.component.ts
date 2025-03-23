@@ -1,11 +1,12 @@
-import { Component, input, InputSignal } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-nav',
-  imports: [],
   templateUrl: './nav.component.html',
   styleUrl: './nav.component.scss'
 })
 export class NavComponent {
-    l = input("black");
+    @Input() l: string = "black";
+    @Input() h: string = "black";
+    @Input() p: string = "black";
 }
