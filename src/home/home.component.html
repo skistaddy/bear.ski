@@ -1,9 +1,11 @@
-<main [style.background-color]="bg()">
+<main [style.background-color]="bg">
     <div class="h-100 d-flex justify-content-center align-items-center text-center">
         <div>
-            <h1 [style.color]="h()">bear.ski</h1>
-            <p class="acronym" [style.color]="p()">{{ acronym() }}</p>
-            <app-nav [l]="l()"/>
+            <a href="/">
+                <h1 class="bear-h1" [style.color]="h">bear.ski</h1>
+            </a>
+            <p class="acronym" [style.color]="p">{{ acronym() }}</p>
+            <app-nav [l]="l"/>
         </div>
     </div>
 </main>
