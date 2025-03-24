@@ -1,5 +1,6 @@
 Session.vim
 .editorconfig
+*.swp
 
 # Compiled output
 /dist
