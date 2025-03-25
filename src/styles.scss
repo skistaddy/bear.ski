@@ -1,12 +1,23 @@
-html, body, main {
+:root {
+  font-size: 200%;
+}
+
+html, body {
+  height: 100%;
+}
+
+main {
+  overflow: auto;
+  padding-bottom: 0.5rem;
   height: 100%;
   font-family: "Bytesized", sans-serif;
-  font-size: 30px;
+  font-size: 1rem;
 }
 
 P {
-  margin-bottom: 0px;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
