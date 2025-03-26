@@ -2,7 +2,8 @@ a {
   text-decoration: none;
 }
 
-.bear-h1 {
+header {
+  height: 1.4rem;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -15,5 +16,5 @@ a {
 
 .acronym {
   padding: 0;
-  margin-bottom: 30px;
+  margin-bottom: 1rem;
 }

@@ -1,8 +1,9 @@
 ul {
-  padding-left: 20px;
-  padding-right: 20px;
-  position: relative;
-  margin-bottom: 0px;
+  margin-top: 0.25rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-bottom: 0remq;
+  line-height: 0.75rem;
 }
 
 li {
@@ -10,9 +11,8 @@ li {
 }
 
 li a {
-  padding-left: 10px;
-  padding-right: 10px;
-  line-height: 40px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 li a:hover {

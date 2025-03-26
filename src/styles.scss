@@ -4,20 +4,31 @@
 
 html, body {
   height: 100%;
+  margin: 0;
 }
 
 main {
-  overflow: auto;
-  padding-bottom: 0.5rem;
   height: 100%;
+  padding-bottom: 0.5rem;
   font-family: "Bytesized", sans-serif;
   font-size: 1rem;
+  padding-right: 20%;
+  padding-left: 20%;
+  overflow: auto;
 }
 
-P {
+@media only screen and (max-width:900px) {
+  main {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+
+}
+
+p {
+  padding: 0.25rem;
+  line-height: 0.75rem;
   margin-top: 0rem;
   margin-bottom: 0rem;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
 }
 

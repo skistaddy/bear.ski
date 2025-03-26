@@ -3,7 +3,3 @@ declare module "chroma-js" {
     export default chroma;
 }
 
-declare module "fs" {
-    const fs: any;
-    export default fs;
-}
