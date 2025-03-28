@@ -1,3 +1,18 @@
 <p>so you've thought of a bear acronym, huh?</p>
-<input type="text" class="justify-content-center text-center form-control shadow-none" placeholder="butterfly ears are rare" aria-describedby="basic-addon1">
+<form 
+    #bearform
+    id="bearform"
+    method="post"
+    onsubmit="return false"
+    >
+    <input
+        [(ngModel)]="bearinput"
+        id="bearinput"
+        name="bearinput"
+        type="text" 
+        class="justify-content-center text-center form-control shadow-none" 
+        placeholder="butterfly ears are rare"
+        (keyup.enter)="check(bearinput)"
+        >
+</form>
 <p>let's put your idea to the test.</p>
