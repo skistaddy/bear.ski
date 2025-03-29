@@ -1,5 +1,5 @@
 # bear.ski
-This is my website! I made it using Angular, Bootstrap, Node.js and TypeScript.
+This is my website! I made it using Angular, Bootstrap, SASS, Node.js and TypeScript.
 
 # Deploy
 If you want to run this on your own system it's as easy as running the following.
