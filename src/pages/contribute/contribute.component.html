@@ -6,13 +6,13 @@
     onsubmit="return false"
     >
     <input
-        [(ngModel)]="bearinput"
         id="bearinput"
         name="bearinput"
         type="text" 
         class="justify-content-center text-center form-control shadow-none" 
-        placeholder="butterfly ears are rare"
-        (keyup.enter)="check(bearinput)"
+        placeholder="bearcronym"
+        (keyup.enter)="check(bearinput.value)"
+        #bearinput
         >
 </form>
 <p>let's put your idea to the test.</p>

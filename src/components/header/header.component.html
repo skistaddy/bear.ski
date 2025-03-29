@@ -1,9 +1,9 @@
 <header class="flex justify-content-center text-center">
+    @let c = p === "white" ? "black" : "white";
     <div>
-        <a href="/">
+        <a href="/" class="p-shadow-{{ c }}">
             <p style="font-size: 1.75rem" [style.color]="h">bear.ski</p>
         </a>
-        
-        <app-nav [l]="l" [h]="h" [p]="p"/>
+        <app-nav [l]="l" [h]="h" [p]="p" class="p-shadow-{{ c }}"/>
     </div>
 </header>

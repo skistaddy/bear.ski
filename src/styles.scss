@@ -1,5 +1,5 @@
 :root {
-  font-size: 200%;
+  font-size: 250%;
 }
 
 html, body {
@@ -7,9 +7,39 @@ html, body {
   margin: 0;
 }
 
+.p-shadow-white {
+  text-shadow: 
+    1px 1px white,
+    2px 2px white,
+    3px 3px white;
+}
+
+.p-shadow-black {
+  text-shadow: 
+    1px 1px black,
+    2px 2px black,
+    3px 3px black;
+}
+
+.h-shadow-white {
+  text-shadow:
+    1px 1px white,
+    2px 2px white,
+    3px 3px white,
+    4px 4px white;
+}
+
+.h-shadow-black {
+  text-shadow:
+    1px 1px black,
+    2px 2px black,
+    3px 3px black,
+    4px 4px black;
+}
+
+
 main {
   height: 100%;
-  padding-bottom: 0.5rem;
   font-family: "Bytesized", sans-serif;
   font-size: 1rem;
   padding-right: 20%;
@@ -22,7 +52,9 @@ main {
     padding-right: 0.5rem;
     padding-left: 0.5rem;
   }
-
+  :root {
+    font-size: 200%
+  }
 }
 
 p {

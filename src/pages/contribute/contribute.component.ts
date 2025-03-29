@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
@@ -10,24 +10,25 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   styleUrl: './contribute.component.scss'
 })
 export class ContributePage {
-    bearinput: string = "";
+    @ViewChild("bearinput") inputRef: ElementRef = {} as ElementRef;
 
     constructor(private http: HttpClient) {
-        this.bearinput = "";
     }
 
     submit(value: string): any {
         this.http
             .post("/submit", {body: value})
             .subscribe(res => {
-                console.log(res)
-            }, err => {
+                console.log("sucess!")
+                this.inputRef.nativeElement.placeholder = "success!"
+            }, err => { 
                 console.log(err)
+                this.inputRef.nativeElement.placeholder = "oops!"
             })
     }
 
     check(input: string): void {
-        this.bearinput = "";
+        this.inputRef.nativeElement.value = "";
         this.submit(input)
     }
 }

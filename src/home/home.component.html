@@ -1,8 +1,13 @@
 <main [style.background-color]="bg">
-    <div class="h-100 gap-0 d-flex justify-content-center align-items-center text-center">
-        <div>
+    @let c = p === "white" ? "black" : "white";
+    <div class=
+        "h-100 gap-0 d-flex 
+        justify-content-center 
+        align-items-center text-center
+        ">
+        <div class="p-shadow-{{c}}">
             <a href="/">
-                <header>
+                <header class="h-shadow-{{c}}">
                     <p style="font-size: 2.5rem"  [style.color]="h">bear.ski</p>
                 </header>
             </a>
