@@ -53,7 +53,7 @@ app.get("*", (req, res) => {
     res.sendFile(path.join(dist, "index.html"))
 })
 
-port = 4200
+port = 3000
 app.listen(port, () => {
     console.log("listening on " + port)
 })
