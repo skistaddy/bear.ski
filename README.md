@@ -6,6 +6,7 @@ If you want to run this on your own system it's as easy as running the following
 ```bash
 git clone https://github.com/skistaddy/bear.ski.git
 cd bear.ski
+npm install
 ng build
 node index
 ```
