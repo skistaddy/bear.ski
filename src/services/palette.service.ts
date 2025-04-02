@@ -9,10 +9,6 @@ function saturate(x: any){
   providedIn: 'root'
 })
 export class PaletteService {
-    private saturate(x: any){
-        return x.set("hsl.s", 1).set("hsl.l", 0.45).hex()
-    }
-
     private base = chroma.random();
 
     bg(): any {
