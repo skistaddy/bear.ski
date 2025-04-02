@@ -45,6 +45,13 @@ app.post("/submit", (req, res) => {
     }
 
     fs.appendFileSync(bearfile, "\n"+input)
+    try {
+        fs.appendFileSync(path.join(dist, "bear.txt"), "\n"+input)
+    } catch (err){
+        console.log("couldn't access bear.txt in dist")
+        console.log(err)
+    }
+
     console.log("acronym added:", input)
     return res.send()
 })
