@@ -5,7 +5,7 @@ app = express()
 
 function bearTest(words){
     words = words.split(" ").filter(x => x)
-    if(words.length > 4){
+    if(words.length != 4){
         return false
     }
 
