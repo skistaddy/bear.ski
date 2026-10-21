@@ -56,7 +56,7 @@ app.post("/submit", (req, res) => {
     return res.send()
 })
 
-app.get("*", (req, res) => {
+app.get("/{*splat}", (req, res) => {
     res.sendFile(path.join(dist, "index.html"))
 })
 
